@@ -1,7 +1,11 @@
-require Rails.root.join('app/controllers/application_base')
-
 
 module ApplicationHelper
-  Myapp::Application.configure do
+  def current_user
+    @current_user ||= User.find_by(id: session[:user_id])
   end
+  
+  def logged_in?
+    !current_user.nil?
+  end
+
 end

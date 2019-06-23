@@ -6,4 +6,9 @@ class User < ApplicationRecord
 # validates :email, format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}　#メールアドレス
   validates :name, length: {maximum: 15} #15文字以内
   has_secure_password
+
+  has_secure_password
+
+  has_many :topics
+  
 end
