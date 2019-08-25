@@ -32,14 +32,19 @@
                 <% end %>
               </li>
               <li>
-                <%= link_to logout_path, method::delete do %>
+                <%= link_to logout_path, method: :delete do %>
                   <%= image_tag "logout.png" %>
                 <% end %>
               </li>
             <% else %>
               <li>
+                <%= link_to new_user_path do %>
+                  <%= image_tag "register.png" %>
+                <% end %>
+              </li>
+              <li>
                 <%= link_to login_path do %>
-                  <%= image_tag "login.png" %>
+                 <%= image_tag "login.png" %>
                 <% end %>
               </li>
             <% end %>
